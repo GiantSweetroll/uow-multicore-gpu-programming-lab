@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>K:\Pelatihan\OpenCL\UOW\Tutorial1a\Debug\Lab.exe</FullPath>
+      <FullPath>K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Tutorial1a\Debug\Lab.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

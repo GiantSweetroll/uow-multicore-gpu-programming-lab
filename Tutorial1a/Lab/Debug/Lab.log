@@ -1,23 +1,20 @@
-﻿Build started 04-Aug-22 2:17:07 PM.
-Logging verbosity is set to: Normal.     1>Project "K:\Pelatihan\OpenCL\UOW\Tutorial1a\Lab\Lab.vcxproj" on node 2 (Build target(s)).
-     1>PrepareForBuild:
-         Creating directory "K:\Pelatihan\OpenCL\UOW\Tutorial1a\Debug\".
-         Creating directory "Debug\Lab.tlog\".
-       InitializeBuildStatus:
+﻿Build started 17-Aug-22 6:11:34 PM.
+Logging verbosity is set to: Normal.     1>Project "K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Tutorial1a\Lab\Lab.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
          Creating "Debug\Lab.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          K:\Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt Tutorial1a.cpp
          Tutorial1a.cpp
        Link:
-         K:\Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"K:\Pelatihan\OpenCL\UOW\Tutorial1a\Debug\Lab.exe" /INCREMENTAL /ILK:"Debug\Lab.ilk" /NOLOGO OpenCL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"K:\Pelatihan\OpenCL\UOW\Tutorial1a\Debug\Lab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"K:\Pelatihan\OpenCL\UOW\Tutorial1a\Debug\Lab.lib" /MACHINE:X86 Debug\Tutorial1a.obj
-         Lab.vcxproj -> K:\Pelatihan\OpenCL\UOW\Tutorial1a\Debug\Lab.exe
+         K:\Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Tutorial1a\Debug\Lab.exe" /INCREMENTAL /ILK:"Debug\Lab.ilk" /NOLOGO OpenCL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Tutorial1a\Debug\Lab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Tutorial1a\Debug\Lab.lib" /MACHINE:X86 Debug\Tutorial1a.obj
+         Lab.vcxproj -> K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Tutorial1a\Debug\Lab.exe
        FinalizeBuildStatus:
          Deleting file "Debug\Lab.tlog\unsuccessfulbuild".
          Touching "Debug\Lab.tlog\Lab.lastbuildstate".
-     1>Done Building Project "K:\Pelatihan\OpenCL\UOW\Tutorial1a\Lab\Lab.vcxproj" (Build target(s)).
+     1>Done Building Project "K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Tutorial1a\Lab\Lab.vcxproj" (Build target(s)).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:03.32
+Time Elapsed 00:00:02.69
