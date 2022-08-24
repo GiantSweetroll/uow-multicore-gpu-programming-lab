@@ -103,10 +103,11 @@ bool select_one_device(cl::Platform* platfm, cl::Device* dev)
 }
 
 // builds program from given filename
-bool build_program(cl::Program* prog, const cl::Context* ctx, const std::string filename)
+bool build_program(cl::Program* prog, const cl::Context* ctx, cl::Device selectedDevice, const std::string filename)
 {
 	// get devices from the context
-	std::vector<cl::Device> contextDevices = ctx->getInfo<CL_CONTEXT_DEVICES>();
+	std::vector<cl::Device> contextDevices;
+	contextDevices.push_back(selectedDevice);
 
 	// open input file stream to .cl file
 	std::ifstream programFile(filename);
@@ -131,6 +132,11 @@ bool build_program(cl::Program* prog, const cl::Context* ctx, const std::string 
 		// build the program for the devices in the context
 		prog->build(contextDevices);
 
+		// Print build log
+		std::string build_log = prog->getBuildInfo<CL_PROGRAM_BUILD_LOG>(selectedDevice);
+		std::cout << "build log:" << std::endl;
+		std::cout << build_log << "--------------------" << std::endl;
+
 		std::cout << "Program build: Successful" << std::endl;
 		std::cout << "--------------------" << std::endl;
 	}
@@ -141,21 +147,12 @@ bool build_program(cl::Program* prog, const cl::Context* ctx, const std::string 
 			// output program build log
 			std::cout << e.what() << ": Failed to build program." << std::endl;
 
-			// check build status for all all devices in context
-			for (unsigned int i = 0; i < contextDevices.size(); i++)
-			{
-				// get device's program build status and check for error
-				// if build error, output build log
-				if (prog->getBuildInfo<CL_PROGRAM_BUILD_STATUS>(contextDevices[i]) == CL_BUILD_ERROR)
-				{
-					// get device name and build log
-					std::string outputString = contextDevices[i].getInfo<CL_DEVICE_NAME>();
-					std::string build_log = prog->getBuildInfo<CL_PROGRAM_BUILD_LOG>(contextDevices[i]);
+			// get device name and build log
+			std::string outputString = (selectedDevice).getInfo<CL_DEVICE_NAME>();
+			std::string build_log = prog->getBuildInfo<CL_PROGRAM_BUILD_LOG>(selectedDevice);
 
-					std::cout << "Device - " << outputString << ", build log:" << std::endl;
-					std::cout << build_log << "--------------------" << std::endl;
-				}
-			}
+			std::cout << "Device - " << outputString << ", build log:" << std::endl;
+			std::cout << build_log << "--------------------" << std::endl;
 
 			return false;
 		}

@@ -32,6 +32,6 @@ const std::string lookup_error_code(cl_int error_code);
 bool select_one_device(cl::Platform* platfm, cl::Device* dev);
 
 // builds program from given filename
-bool build_program(cl::Program* prog, const cl::Context* ctx, const std::string filename);
+bool build_program(cl::Program* prog, const cl::Context* ctx, cl::Device selectedDevice, const std::string filename);
 
 #endif

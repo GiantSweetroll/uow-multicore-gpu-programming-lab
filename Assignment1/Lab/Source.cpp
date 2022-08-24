@@ -39,8 +39,11 @@ int main(void)
 		// create a context from device
 		context = cl::Context(device);
 
+		// create command queue
+		queue = cl::CommandQueue(context, device);
+
 		// build the program
-		if (!build_program(&program, &context, "blank_kernel.cl"))
+		if (!build_program(&program, &context, device, "source.cl"))
 		{
 			// if OpenCL program build error
 			quit_program("OpenCL program build error.");
@@ -86,12 +89,36 @@ int main(void)
 		// get and output the global memory size
 		cl_ulong globalMemSize = device.getInfo<CL_DEVICE_GLOBAL_MEM_SIZE>();
 		cout << "Global memory size: " << globalMemSize << " bytes" << endl;
+		cout << "--------------------" << endl;
 
-		// create a kernel
-		kernel = cl::Kernel(program, "blank");
+		// check if device supports the cl_khr_fp16 extension
+		string supportedExtensions = device.getInfo<CL_DEVICE_EXTENSIONS>();
+		if (supportedExtensions.find("cl_khr_fp16") != string::npos) // npos is what string.find() returns if no match was found
+		{
+			cout << "This device supports the cl_khr_fp16 extension!" << endl;
+		}
+		else
+		{
+			cout << "This device does not support the cl_khr_fp16 extension." << endl;
+		}
+		cout << "--------------------" << endl;
 
-		// create command queue
-		queue = cl::CommandQueue(context, device);
+		// find and display the number of kernels in the program
+		vector<cl::Kernel> allKernels;
+
+		// create all kernels in the program
+		program.createKernels(&allKernels);
+
+		// output the number of kernels
+		cout << "The number of kernels: " << allKernels.size() << endl;
+
+		// output kernel names
+		for (int i = 0; i < allKernels.size(); i++)
+		{
+			outputString = allKernels[i].getInfo<CL_KERNEL_FUNCTION_NAME>();
+			cout << "Kernel " << i << ": " << outputString << endl;
+		}
+		cout << "--------------------" << endl;
 	}
 	// catch any OpenCL function errors
 	catch (cl::Error e) {
