@@ -131,8 +131,8 @@ int main(void)
 		std::cout << "--------------------" << std::endl;
 
 		// Save output to a file
-		saveMessageToFile(&charVecEncryptOutput, "ciphertext2a.txt");
-		saveMessageToFile(&charVecDecryptOutput, "decrypted2a.txt");
+		saveMessageToFile(&charVecEncryptOutput, "ciphertext2b.txt");
+		saveMessageToFile(&charVecDecryptOutput, "decrypted2b.txt");
 		std::cout << "Messages saved to file." << std::endl;
 	}
 	// catch any OpenCL function errors

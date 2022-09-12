@@ -1,4 +1,4 @@
-﻿Build started 12-Sep-22 9:31:14 PM.
+﻿Build started 12-Sep-22 9:38:51 PM.
 Logging verbosity is set to: Normal.     1>Project "K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Assignment2\Task2b\Lab\Lab.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Lab.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -26,4 +26,4 @@ Build succeeded.
     2 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.88
+Time Elapsed 00:00:02.14
