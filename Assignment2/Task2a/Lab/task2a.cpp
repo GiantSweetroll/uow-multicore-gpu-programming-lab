@@ -18,7 +18,20 @@ void encrypt(list<char>* ls, int n)
 
 		// only shift alphabetical characters
 		if (c >= 65 && c <= 90)
+		{
 			c += n;
+
+			// If any of the new characters are beyond the alphabet
+			// range, loop them back in
+			if (c > 90)
+			{
+				c = 64 + (c % 90);
+			}
+			else if (c < 65)
+			{
+				c = 91 - (65 % c);
+			}
+		}
 		
 		// put it back into the list
 		*it = c;
