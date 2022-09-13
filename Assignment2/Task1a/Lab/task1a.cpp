@@ -98,7 +98,7 @@ int main(void)
 		queue.enqueueReadBuffer(outputBuffer, CL_TRUE, 0, sizeof(cl_int) * NUM_OF_WORK_ITEMS, &output[0]);
 
 		// check the results
-		std::cout << "--------------------" << std::endl;
+		std::cout << "Output array:" << std::endl;
 		for (int i = 0; i < NUM_OF_WORK_ITEMS; i++)
 		{
 			std::cout << output[i] << " ";
