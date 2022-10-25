@@ -1,0 +1,22 @@
+﻿Build started 25-Oct-22 4:14:20 PM.
+Logging verbosity is set to: Normal.     1>Project "K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Assignment3\Task4\Lab\Lab.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Lab.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         K:\Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt task4.cpp
+         task4.cpp
+       Link:
+         K:\Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Assignment3\Task4\Debug\Lab.exe" /INCREMENTAL /ILK:"Debug\Lab.ilk" /NOLOGO OpenCl.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Assignment3\Task4\Debug\Lab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Assignment3\Task4\Debug\Lab.lib" /MACHINE:X86 Debug\bmpfuncs.obj
+         Debug\common.obj
+         Debug\task4.obj
+         Lab.vcxproj -> K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Assignment3\Task4\Debug\Lab.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\Lab.tlog\unsuccessfulbuild".
+         Touching "Debug\Lab.tlog\Lab.lastbuildstate".
+     1>Done Building Project "K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Assignment3\Task4\Lab\Lab.vcxproj" (Build target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.71

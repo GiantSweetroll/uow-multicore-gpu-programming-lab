@@ -110,6 +110,9 @@ int main(void)
 
 		queue.enqueueReadImage(outputImgBuffer, CL_TRUE, origin, region, 0, 0, outputImage);
 
+		// set image buffer for vertical pass
+		inputImgBuffer = cl::Image2D(context, CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR, imgFormat, imgWidth, imgHeight, 0, (void*)outputImage);
+
 		// set kernel arguments for vertical pass
 		kernel.setArg(0, inputImgBuffer);
 		kernel.setArg(1, outputImgBuffer);

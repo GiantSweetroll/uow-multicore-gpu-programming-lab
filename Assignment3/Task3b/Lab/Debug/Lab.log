@@ -1,7 +1,7 @@
-﻿Build started 22-Oct-22 4:46:21 PM.
+﻿Build started 25-Oct-22 4:20:38 PM.
 Logging verbosity is set to: Normal.     1>Project "K:\GitHub Repositories\uow-multicore-gpu-programming-lab\Assignment3\Task3b\Lab\Lab.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
-         Creating "Debug\Lab.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "Debug\Lab.tlog\unsuccessfulbuild".
        ClCompile:
          K:\Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt task3b.cpp
          task3b.cpp
@@ -19,4 +19,4 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.50
+Time Elapsed 00:00:01.89
